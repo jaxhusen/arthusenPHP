@@ -26,8 +26,9 @@ if(
         die("Invalid input");
     }
 
-if($success){
-    header("Location: /arthusen/pages/login.php");
+if($success){  
+    header("Location: /arthusen/pages/login.php"); 
+    /* SUCESS MEDDELANDE FÖR SKAPANDE AV ANVÄNDARE HÄR */
 }else{
     die("Error saving user");
 }

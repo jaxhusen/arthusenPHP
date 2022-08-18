@@ -37,7 +37,11 @@ class Template
                 <?php if (!$is_logged_in) : ?>
                     <a href="/arthusen/pages/login.php">Login</a>
                     <a href="/arthusen/pages/register.php">Register</a>
-
+<!-- 
+    här ska php : else:
+        /arthusen/pages/orders.php hamna
+    
+ -->
                 <?php elseif($is_admin): ?>
                     <a href="/arthusen/pages/admin.php">Admin area</a>
                 <?php endif; ?>
@@ -48,9 +52,9 @@ class Template
                     <b>Logged in as:</b>
                     <?= $logged_in_user->username ?>
 
-                   <!--  <form action="/shop/scripts/post-logout.php" method="post">
+                   <form action="/arthusen/scripts/post-logout.php" method="post">
                         <input type="submit" value="Logout">
-                    </form> -->
+                    </form>
                 </p>
             <?php endif; ?>
             <hr>
