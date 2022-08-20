@@ -11,4 +11,5 @@ $is_admin = $is_logged_in && $logged_in_user->role == "admin";
 
 if(!$is_admin){
     http_response_code(401);
+    die("Access denied");
 }

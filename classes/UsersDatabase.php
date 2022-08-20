@@ -15,7 +15,10 @@ class UsersDatabase extends Database{
         $user = null;
 
         if($db_user){
-            $user = new User($db_user["username"], $db_user["role"], $db_user["id"]);
+            $user = new User(
+                $db_user["username"], 
+                $db_user["role"], 
+                $db_user["id"]);
             $user->set_password_hash($db_user["password-hash"]);
         }
         return $user;
@@ -46,5 +49,18 @@ class UsersDatabase extends Database{
     }
 
     // update
+    public function update(User $user, $id){
+        $query = "UPDATE users SET `username`=?, `role`=? WHERE id=?";
+        $stmt = mysqli_prepare($this->conn, $query);
+        $stmt->bind_param(
+            "ss",
+            $user->username,
+            $user->role,
+            $id
+        );
+        return $stmt->execute();
+    }
+
+
     // delete
 }

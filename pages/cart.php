@@ -16,9 +16,9 @@ Template::header("Cart"); ?>
 
 <?php foreach ($products as $product) : ?>
 
-<div>
-    <b><?= $product->title ?>
+<div>    
     <button data-id=" <?= $product->id ?>" class="show-product-details"> Show </button>
+    <?= $product->title ?>
 </div>
 
 <?php 

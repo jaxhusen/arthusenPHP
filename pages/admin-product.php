@@ -32,7 +32,7 @@ if ($product == null) : ?>
 
 <?php else : ?>
 
-    <form action="/shop/admin-scripts/post-update-product.php?id=<?= $_GET["id"] ?>" method="post" enctype="multipart/form-data">
+    <form action="/arthusen/admin-scripts/post-update-product.php?id=<?= $_GET["id"] ?>" method="post" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Title" value="<?= $product->title ?>"> <br>
         <textarea name="description" placeholder="Description"><?= $product->description ?></textarea> <br>
         <input type="number" name="price" placeholder="Price" value="<?= $product->price ?>"> <br>
@@ -42,7 +42,7 @@ if ($product == null) : ?>
 
     <p><b>Delete:</b></p>
 
-    <form action="/shop/admin-scripts/post-delete-product.php" method="post">
+    <form action="/arthusen/admin-scripts/post-delete-product.php" method="post">
         <input type="hidden" name="id" value="<?= $_GET["id"] ?>">
         <input type="submit" value="Delete product">
     </form>

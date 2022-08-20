@@ -56,7 +56,7 @@ class ProductsDatabase extends Database{
 
     //update
     public function update(Product $product, $id){
-        $query = "UPDATE products SET title = ?, `description` = ?, price = ?, `img-url` = ? WHERE id = ?";
+        $query = "UPDATE products SET `title`=?, `description`=?, price=?, `img-url`=? WHERE id=?";
         $stmt = mysqli_prepare($this->conn, $query);
         $stmt->bind_param(
             "ssisi",

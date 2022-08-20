@@ -9,14 +9,13 @@ $products_db = new ProductsDatabase();
 $products = $products_db->get_all();
 
 Template::header("Products"); 
-/* var_dump($_SESSION); */
 
 foreach ($products as $product) : ?>
 
 <div class="product">
-<img src="<?= $product->img_url ?>" width="100" height="100" alt="Product image">
-    <b><?= $product->title ?>
-    <i><?= $product->price ?> kr </i>
+<img src="<?= $product->img_url ?>" width="200px" height="200px" alt="Product image">
+    <b><?= $product->title ?> </b><br>
+    <i><?= $product->price ?> kr </i><br>
     <p> <?= $product->description ?> </p>
     
 

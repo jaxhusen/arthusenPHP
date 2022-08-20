@@ -21,14 +21,15 @@ class Template
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title> <?= $title ?> - Startsida </title>
             <link rel="stylesheet" href="/arthusen/assets/style.css">
+            <title> <?= $title ?> - Startsida </title>
+            
         </head>
 
         <body>
-            <h1> <?= $title ?> </h1>
+            <h1 class="title-class"> <?= $title ?> </h1>
 
-            <nav>
+            <nav class="meny-nav">
                 <a href="/arthusen">Start</a>
                 <a href="/arthusen/pages/products.php">Products</a>
                 <a href="/arthusen/pages/cart.php">Cart(<?= $cart_count?>)</a>
@@ -48,12 +49,12 @@ class Template
             </nav>
 
             <?php if ($is_logged_in) : ?>
-                <p>
-                    <b>Logged in as:</b>
+                <p class="logged-in-box">
+                    <b>Logged in as: </b>
                     <?= $logged_in_user->username ?>
 
                    <form action="/arthusen/scripts/post-logout.php" method="post">
-                        <input type="submit" value="Logout">
+                        <input class="logout-btn" type="submit" value="Logout">
                     </form>
                 </p>
             <?php endif; ?>
@@ -66,7 +67,7 @@ class Template
     {
 
         ?>
-            <footer>
+            <footer class="footer_class">
                 Copyright ARThusen 2020
             </footer>
 

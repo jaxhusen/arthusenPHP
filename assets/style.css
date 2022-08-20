@@ -11,7 +11,8 @@ body{
     background-color: white;
     max-width: 800px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px rgb(94, 81, 58);
 }
 
 form{
@@ -19,7 +20,52 @@ form{
 }
 
 .product{ /* från pages->products (allt i varukorgen) */
-    display: flex;
+    /* position: absolute; */
     border-bottom: 1px solid grey;
+    margin-bottom: 100;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.footer_class{
+    background-color: rgb(199, 173, 124);
+    padding: 20px;
+    margin: -20px;
+    margin-top: 10px;
+}
+
+.title-class{
+    background-color: rgb(199, 173, 124);
+    padding: 20px;
+    margin: -20px;
     margin-bottom: 10px;
+}
+
+.meny-nav{
+    background-color: rgb(199, 173, 124);
+    padding: 20px;
+    margin: -20px;
+    margin-bottom: 10px;
+}
+
+
+.logged-in-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.logout-btn{
+    padding: 10px;
+    background-color: red;
+    border: 2px solid darkred;
+    justify-content: flex-end;
+    position: absolute;
+    top: 150px;
+    margin-left: 700px;
+}
+
+.logout-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
