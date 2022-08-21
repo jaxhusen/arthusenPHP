@@ -27,8 +27,7 @@ if(
     }
 
 if($success){  
-    header("Location: /arthusen/pages/login.php"); 
-    /* SUCESS MEDDELANDE FÖR SKAPANDE AV ANVÄNDARE HÄR */
+    header("Location: /arthusen/pages/login.php?register=success"); 
 }else{
     die("Error saving user");
 }

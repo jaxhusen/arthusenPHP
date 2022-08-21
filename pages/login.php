@@ -3,6 +3,10 @@
 require_once __DIR__ . "/../classes/Template.php";
 
 Template::header("Login");
+if(isset($_GET["register"]) && $_GET["register"] == "success"){
+    echo "<h2> User registered, log in </h2>";
+}
+
 if(isset($_GET["error"]) && $_GET["error"] == "wrong_pass") : ?>
 
 <h2>Wrong username or password! </h2>
@@ -14,6 +18,8 @@ if(isset($_GET["error"]) && $_GET["error"] == "wrong_pass") : ?>
     <input type="password" name="password" placeholder="Password"><br>
     <input type="submit" value="Login">
 </form>
+
+<a href="/arthusen//pages/register.php"> Register account </a>
 
 <?php
 
