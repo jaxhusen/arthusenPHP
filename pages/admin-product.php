@@ -36,7 +36,7 @@ if ($product == null) : ?>
         <input type="text" name="title" placeholder="Title" value="<?= $product->title ?>"> <br>
         <textarea name="description" placeholder="Description"><?= $product->description ?></textarea> <br>
         <input type="number" name="price" placeholder="Price" value="<?= $product->price ?>"> <br>
-        <input type="file" name="image" accept="image/*"> <br>
+        <input type="file" name="image" accept="image/*">
         <input type="submit" value="Save">
     </form>
 

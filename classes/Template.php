@@ -27,7 +27,9 @@ class Template
         </head>
 
         <body>
-            <h1 class="title-class"> <?= $title ?> </h1>
+            <header>
+                <h1 class="title-class"> <?= $title ?> </h1>
+            </header>
 
             <nav class="meny-nav">
                 <a href="/arthusen">Start</a>

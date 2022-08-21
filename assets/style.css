@@ -11,8 +11,10 @@ body{
     background-color: white;
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
     box-shadow: 10px 10px 5px rgb(94, 81, 58);
+    display:flex;
+    flex-direction: column;
+
 }
 
 form{
@@ -31,21 +33,32 @@ form{
 .footer_class{
     background-color: rgb(199, 173, 124);
     padding: 20px;
-    margin: -20px;
+
     margin-top: 10px;
 }
 
 .title-class{
-    background-color: rgb(199, 173, 124);
+    
     padding: 20px;
     margin: -20px;
-    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+header{
+    background: url('/arthusen/assets/uploads/header2.jpg');
+    min-height: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .meny-nav{
     background-color: rgb(199, 173, 124);
     padding: 20px;
-    margin: -20px;
     margin-bottom: 10px;
 }
 
@@ -56,16 +69,43 @@ form{
 }
 
 .logout-btn{
-    padding: 10px;
+    padding: 5px 10px;
     background-color: red;
     border: 2px solid darkred;
-    justify-content: flex-end;
+    color: darkred;
     position: absolute;
-    top: 150px;
+    top: 390px;
     margin-left: 700px;
+    font-size: 15px;
+
 }
 
 .logout-btn:hover{
     opacity: 0.8;
     cursor: pointer;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+textarea,
+select{
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 5px;
+    margin: 3px 0;
+    width: 300px;
+}
+
+input[type=file]{
+    position: absolute;
+    margin-left: -250px;
+    margin-top: 35px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+input[type=submit]{
+    padding: 5px 10px;
+    font-size: 15px;
 }
